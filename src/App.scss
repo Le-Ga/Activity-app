@@ -1,0 +1,99 @@
+@import 'normolize.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+// font-family: 'Caveat', cursive;
+
+body {
+   min-height: 100vh;
+   background: linear-gradient(to right, #833ab4,
+         #fd1d1d, #fcb045);
+   background-size: 400% 400%;
+   animation      : animate-background 10s infinite ease-in-out;
+   font-family    : 'Caveat', cursive;
+   color          : rgba(255, 255, 255, 0.75);
+}
+
+@keyframes animate-background {
+   0% {
+      background-position: 0 50%;
+   }
+
+   50% {
+      background-position: 100% 50%;
+   }
+
+   100% {
+      background-position: 0 50%;
+   }
+}
+
+.container {
+   max-width: 1000px;
+   margin   : 0 auto;
+}
+
+.activity-card {
+   display       : flex;
+   flex-direction: column;
+
+   .header {
+      font-size : 64px;
+      text-align: center;
+      margin    : 30px 0 0 0;
+
+      @media (max-width: 800px) {
+         font-size: 40px;
+         margin   : 15px 0 0 0;
+      }
+   }
+
+   .addBtn {
+      margin: 30px 0 0 0;
+   }
+
+   .crutch {
+      display: none;
+   }
+
+   .activity-list {
+      font-size: 32px;
+      padding  : 0 20px;
+      margin   : 30px 0 0 0;
+
+      li {
+         padding: 0 0 20px 0;
+
+         &:last-child {
+            padding: 0;
+         }
+
+         @media (max-width: 800px) {
+            margin: 5px 0 0 0;
+         }
+      }
+
+      @media (max-width: 800px) {
+         font-size: 20px;
+         margin   : 15px 0 0 0;
+      }
+   }
+
+   .deleteBtn {
+      display: none;
+      margin : 30px 0 0 0;
+   }
+
+   .btn {
+      align-self   : center;
+      font-size    : 38px;
+      border-radius: 20px;
+      padding      : 5px 15px;
+      background   : none;
+      border       : 2px solid rgba(255, 255, 255, 0.75);
+      color        : rgba(255, 255, 255, 0.75);
+
+      @media (max-width: 800px) {
+         font-size: 20px;
+         margin   : 15px 0 0 0;
+      }
+   }
+}
