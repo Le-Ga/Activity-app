@@ -6,7 +6,7 @@ function App() {
    const [activityList, setActivityList] = useState([]);
 
    async function fetchMyApi() {
-      const response = await fetch('https://www.boredapi.com/api/activity/');
+      const response = await fetch('http://www.boredapi.com/api/activity/');
       const data = await response.json();
       setActivity(data.activity);
       let listArray = activityList;
